@@ -7,35 +7,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
   <div class="carousel">
-  <div class="overlay">
-    <ul id="slides" class="slides">
-      <li class="slide active"></li>
-      <li class="slide"></li>
-      <li class="slide"></li>
-      <li class="slide"></li>
-      <li class="slide"></li>
+    <ul class="carousel-slides__container" id="slides">
+      <li class="carousel-slide active"></li>
+      <li class="carousel-slide"></li>
+      <li class="carousel-slide"></li>
+      <li class="carousel-slide"></li>
+      <li class="carousel-slide"></li>
     </ul>
-  </div>
-    <div class="btn-container">
-      <span class="control" id="prev"><i class="fa-solid fa-arrow-left"></i></span>
-      <span class="control" id="pause"><i class="fa-regular fa-circle-pause"></i></span>
-      <span class="control" id="next"><i class="fa-solid fa-arrow-right"></i></span>
+
+    <div class="carousel-controls__container">
+      <span class="carousel-control" id="prev"><i class="fa-solid fa-arrow-left"></i></span>
+      <span class="carousel-control" id="pause"><i class="fa-regular fa-circle-pause"></i></span>
+      <span class="carousel-control" id="next"><i class="fa-solid fa-arrow-right"></i></span>
     </div>
 
-    <div class="indicators" id="indicators-container">
-      <div class="indicator active" data-slide-to="0"></div>
-      <div class="indicator" data-slide-to="1"></div>
-      <div class="indicator" data-slide-to="2"></div>
-      <div class="indicator" data-slide-to="3"></div>
-      <div class="indicator" data-slide-to="4"></div>
+    <div class="carousel-indicators__container" id="indicators-container">
+      <div class="carousel-indicator active" data-slide-to="0"></div>
+      <div class="carousel-indicator" data-slide-to="1"></div>
+      <div class="carousel-indicator" data-slide-to="2"></div>
+      <div class="carousel-indicator" data-slide-to="3"></div>
+      <div class="carousel-indicator" data-slide-to="4"></div>
     </div>
   </div>
-  <script src="./js/main.js"></script>
+
+  <script src="./assets/js/main.js"></script>
+
 </body>
 
 </html>
