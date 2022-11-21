@@ -1,8 +1,4 @@
-// function Carousel() {
-  
-// }
-// Carousel.prototype = {
 
-// }
+const slider = new Carousel()
 
-// const slider = new Carousel
+slider.init()
