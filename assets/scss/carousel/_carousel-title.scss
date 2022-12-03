@@ -1,0 +1,22 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.carousel-title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  min-height: 21vh;
+  align-items: flex-end;
+
+  &__item {
+    color: rgb(12, 1, 1);
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 2;
+
+    @include sm {
+      font-size: 1rem;
+      margin-bottom: -30px;
+    }
+  }
+}

@@ -11,33 +11,66 @@
 </head>
 
 <body>
-  <div class="carousel">
-    <ul class="carousel-slides__container">
-      <li class="carousel-slide active"></li>
-      <li class="carousel-slide"></li>
-      <li class="carousel-slide"></li>
-      <li class="carousel-slide"></li>
-      <li class="carousel-slide"></li>
-    </ul>
+  <header class="header">
+    <div class="header-menu">
 
-    <div class="carousel-controls__container">
-      <span class="carousel-control" id="prev"><i class="fa-solid fa-arrow-left"></i></span>
-      <span class="carousel-control" id="pause"><i class="fa-regular fa-circle-pause"></i></span>
-      <span class="carousel-control" id="next"><i class="fa-solid fa-arrow-right"></i></span>
+      <img class="header-logo" src="./assets/img/logo.png" alt="">
+
+      <div class="header-contact">
+        <span class="header-contact__number">Телефон: 096-***-**-**</span>
+        <span class="header-contact__separator"></span>
+        <span class="header-contact__address">Адресс: вул.Шевченка 35</span>
+      </div>
+
+      <nav class=header-navbar>
+        <div class="header-navbar__btn">
+          <span class="header-navbar__btn-row"></span>
+          <span class="header-navbar__btn-row"></span>
+          <span class="header-navbar__btn-row"></span>
+        </div>
+
+        <ol class="header-navbar__list active">
+          <li class="header-navbar__item">
+            <a class="header-navbar__link" href="">Головна</a>
+          </li>
+          <li class="header-navbar__item">
+            <a class="header-navbar__link" href="">Пошук</a>
+          </li>
+          <li class="header-navbar__item">
+            <a class="header-navbar__link" href="">Вибранi</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <main class="carousel" id="mycarousel">
+
+    <div class="carousel-title">
+      <p class="carousel-title__item">Топ автомобілів цього тижня</p>
     </div>
 
-    <div class="carousel-indicators__container" id="indicators-container">
-      <div class="carousel-indicator active" data-slide-to="0"></div>
-      <div class="carousel-indicator" data-slide-to="1"></div>
-      <div class="carousel-indicator" data-slide-to="2"></div>
-      <div class="carousel-indicator" data-slide-to="3"></div>
-      <div class="carousel-indicator" data-slide-to="4"></div>
+    <div class="carousel-slides__container">
+      <div class="carousel-slide item active"><span class="carousel-slide__prise">1000$</span></div>
+      <div class="carousel-slide item"><span class="carousel-slide__prise">2000$</span></div>
+      <div class="carousel-slide item"><span class="carousel-slide__prise">4000$</span></div>
+      <div class="carousel-slide item"><span class="carousel-slide__prise">6000$</span></div>
+      <div class="carousel-slide item"><span class="carousel-slide__prise">10000$</span></div>
     </div>
-  </div>
 
-  <script src="./assets/js/carousel.js"></script>
-<script src="./assets/js/carosul-swipe.js"></script>
-  <script src="./assets/js/index.js"></script>
+    <div class="carousel-bottom">
+      <a class="carousel-bottom__link" href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a class="carousel-bottom__link" href="#"><i class="fa-brands fa-telegram"></i></a>
+      <a class="carousel-bottom__link" href="#"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+  </main>
+
+  <div class="overlay"></div>
+
+  <script src="./assets/js/index.js" type="module"></script>
+  <script src="./libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/menu.js"></script>
+
 </body>
 
 </html>

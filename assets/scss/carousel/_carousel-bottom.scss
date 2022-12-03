@@ -1,0 +1,27 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.carousel-bottom__link:hover {
+  color: $color-accent;
+  transition: 1s;
+}
+
+.carousel-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  z-index: 3;
+  width: 100%;
+
+  @include lg {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__link {
+    font-size: 2rem;
+    padding: $gap;
+    color: rgb(173, 162, 162);
+  }
+}

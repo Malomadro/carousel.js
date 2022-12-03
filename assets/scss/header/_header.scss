@@ -1,0 +1,19 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+
+  &-menu {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 80%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

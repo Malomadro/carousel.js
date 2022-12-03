@@ -1,0 +1,42 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  z-index: 4;
+
+  @include sm {
+    text-transform: none;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-left: $gap;
+  }
+
+  &__number {
+    color: $color-accent;
+  }
+
+  &__address {
+    color: $color-accent;
+
+    @include ul {
+      display: none;
+    }
+  }
+
+  &__separator {
+    width: 1px;
+    height: 30px;
+    margin: 0 $gap;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    @include ul {
+      display: none;
+    }
+  }
+}

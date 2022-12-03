@@ -1,0 +1,11 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.carousel {
+  position: relative;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}

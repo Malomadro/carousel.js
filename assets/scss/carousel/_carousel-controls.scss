@@ -1,0 +1,65 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.carousel-controls__container,
+.carousel-indicators__container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+
+  @include lg {
+    display: none;
+  }
+}
+
+.carousel-controls__container {
+  margin-top: -90px;
+  gap: $gap-x3;
+}
+
+.carousel-indicators__container {
+  margin-top: -$gap
+}
+
+.carousel-indicator,
+.carousel-control {
+  z-index: 3;
+  user-select: none;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.carousel-control {
+  font-size: 50px;
+  display: flex;
+  color: rgb(167, 153, 153);
+}
+
+.carousel-control:hover {
+  color: $color-accent;
+  transition: 0.5s;
+}
+
+.carousel-indicator {
+  margin-right: 7px;
+  margin-left: 7px;
+  border-radius: 1em;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.carousel-indicator:hover,
+.carousel-indicator.active {
+  background-color: $color-accent;
+  border: 3px solid $color-accent;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.carousel-indicator:hover {
+  transition: 0.5s;
+}

@@ -1,0 +1,12 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.header-logo {
+  margin-left: $gap;
+  width: 113px;
+  height: 71px;
+
+  @include sm {
+    display: none;
+  }
+}

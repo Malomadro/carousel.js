@@ -1,0 +1,28 @@
+@use "carousel";
+@use "header";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(73, 60, 60);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(253, 253, 253);
+}
+
+.overlay {
+  top: 0%;
+  position: absolute;
+  z-index: 1;
+  background-image: url(../img/overlay-4.jpg);
+  height: 100vh;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+}

@@ -1,0 +1,62 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.carousel-slides__container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 10%;
+  z-index: -999;
+  transition: opacity 0.25s;
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: opacity 1s;
+  opacity: 0;
+
+  @include sm {
+    height: 300px;
+    width: 300px;
+  }
+
+  &__prise {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: $gap;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    user-select: none;
+  }
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-slide:nth-of-type(1) {
+  background-image: url(../img/slide-image-1.jpg);
+}
+
+.carousel-slide:nth-of-type(2) {
+  background-image: url(../img/slide-image-2.webp);
+}
+
+.carousel-slide:nth-of-type(3) {
+  background-image: url(../img/slide-image-3.jpg);
+}
+
+.carousel-slide:nth-of-type(4) {
+  background-image: url(../img/slide-image-4.jpg);
+}
+
+.carousel-slide:nth-of-type(5) {
+  background-image: url(../img/slide-image-5.jpg);
+}

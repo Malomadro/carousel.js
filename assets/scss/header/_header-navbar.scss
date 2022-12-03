@@ -1,0 +1,115 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.header-navbar {
+  @extend %container;
+
+  &__list {
+    display: flex;
+    gap: $gap;
+
+    @include lg {
+      display: none;
+    }
+
+    @include lg {
+      position: absolute;
+      top: 100%;
+      right: $gap;
+      display: none;
+      text-align: left;
+      background-color: rgba(0, 0, 0, 0.8);
+      @include box-shadow;
+      @include unlist;
+    }
+
+    &.animate__flipInX,
+    &.animate__flipOutX {
+      display: block;
+    }
+  }
+
+  &__item {
+    @include lg {
+      margin: $gap $gap-sm;
+    }
+  }
+
+  &__link {
+    @include unlist;
+    transition: color 0.5s;
+    letter-spacing: 0.1em;
+    font-size: 1.125rem;
+
+    @include md-min {
+      padding: $gap $gap-sm;
+    }
+
+    @include lg {
+      color: $color-accent;
+      padding: $gap-sm $gap;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: $gap-lg;
+    height: 23px;
+    margin: $gap 0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+
+    @include lg-min {
+      display: none;
+    }
+
+    &-row {
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 3px;
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+      opacity: 1;
+      border-radius: 3px;
+      background: $color-light;
+
+      &:nth-of-type(1) {
+        top: 0;
+      }
+
+      &:nth-of-type(2) {
+        top: 9px;
+      }
+
+      &:nth-of-type(3) {
+        top: 18px;
+      }
+    }
+
+    &--active span {
+
+      &:nth-of-type(1) {
+        top: 9px;
+        transform: rotate(135deg);
+      }
+
+      &:nth-of-type(2) {
+        left: -30px;
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        top: 9px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}
